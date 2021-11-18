@@ -26,8 +26,8 @@ button{
     font-size: 1.2rem;
     border-radius: 0.3rem;
   }
-  #result p{
-    width: 60%;
+  #result p,h4{
+    width: 80%;
     margin: 0 auto;
   }
 }
