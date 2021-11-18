@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.search {
+  width: 30%;
+  margin: 0 auto;
+  display: block;
+}
+
+
+input,button {
+  font-size: 1.6rem;
+  border-radius: 0.3rem;
+}
+
