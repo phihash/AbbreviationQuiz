@@ -4,6 +4,7 @@ const answers = {
   "AA":"再生不良性貧血",
   "PBC":"原発性胆汁性胆管炎",
   "MM":"多発性骨髄腫",
+  "HS":"遺伝球状赤血球症",
   "CHF":"うっ血性心不全",
   "AIH":"自己免疫性肝炎",
   "AVM":"脳動静脈奇形",
@@ -26,7 +27,7 @@ const answers = {
 const searchButton = document.getElementById("search");
 const searchValue = document.getElementById("abbreviation");
 let answerArea = document.getElementById("result");
-let answerAreaTitle = document.createElement('h3');
+let answerAreaTitle = document.createElement('h2');
 let answerAreaAnswer = document.createElement('p');
 
 console.log(typeof searchValue.value);
@@ -61,6 +62,26 @@ searchButton.addEventListener('click',() => {
       answerAreaAnswer.textContent = "表示結果はありません";
       answerArea.appendChild(answerAreaTitle);
       answerArea.appendChild(answerAreaAnswer);
+    }
+  }
+})
+searchValue.addEventListener('keypress',(e) => {
+  if(e.key == 'Enter'){
+    let text = processAlphabets(searchValue.value);
+    console.log(text);
+    for(const prop in answers ){
+      if(text == prop){
+        answerAreaTitle.textContent = "検索結果";
+        answerAreaAnswer.textContent = answers[prop];
+        answerArea.appendChild(answerAreaTitle);
+        answerArea.appendChild(answerAreaAnswer);
+        return;
+      }else{
+        answerAreaTitle.textContent = "検索結果";
+        answerAreaAnswer.textContent = "表示結果はありません";
+        answerArea.appendChild(answerAreaTitle);
+        answerArea.appendChild(answerAreaAnswer);
+      }
     }
   }
 })
