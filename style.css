@@ -26,4 +26,8 @@ button{
     font-size: 0.8rem;
     border-radius: 0.3rem;
   }
+  #result{
+    width: 40%;
+    margin: 0 auto;
+  }
 }
