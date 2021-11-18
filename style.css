@@ -19,11 +19,11 @@ button{
 @media (max-width: 600px){
 
   .search {
-    width: 40%;
+    width: 100%;
     margin: 0 auto;
   }
   input,button {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     border-radius: 0.3rem;
   }
   #result{
