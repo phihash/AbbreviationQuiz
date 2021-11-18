@@ -12,3 +12,6 @@ input,button {
   border-radius: 0.3rem;
 }
 
+button{
+  cursor: pointer;
+}
