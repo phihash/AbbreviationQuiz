@@ -59,6 +59,15 @@ let answerAreaAnswer = document.createElement('p');
 
 console.log(typeof searchValue.value);
 
+function checkIsAlphabets(string){
+  string = string.split("");
+  for(let i=0;i < string.length;i++){
+    if(string[i].charCodeAt(0)<64 || string[i].charCodeAt(0)>123){
+      return true;
+    }
+  }
+}
+
 function processAlphabets(string){
   string = string.split("");
   for(let i=0; i < string.length;i++){
@@ -75,6 +84,10 @@ function processAlphabets(string){
 // if(searchValue.value )
 
 searchButton.addEventListener('click',() => {
+  if(checkIsAlphabets(searchValue.value)){
+    confirm("半角英字で入力してください");
+    return;
+  }
   let text = processAlphabets(searchValue.value);
   console.log(text);
   for(const prop in answers ){
@@ -94,6 +107,10 @@ searchButton.addEventListener('click',() => {
 })
 searchValue.addEventListener('keypress',(e) => {
   if(e.key == 'Enter'){
+    if(checkIsAlphabets(searchValue.value)){
+      confirm("半角英字で入力してください");
+      return;
+    }
     let text = processAlphabets(searchValue.value);
     console.log(text);
     for(const prop in answers ){
