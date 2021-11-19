@@ -77,13 +77,6 @@ function processAlphabets(string){
   }
   return string.join("")
 }
-//valueには要素のvalue(アルファベットの文字列)に入れる
-// function confirmCapital(searchValue){
-//   value = searchValue.value.split("");
-  
-// }
-
-// if(searchValue.value )
 
 searchButton.addEventListener('click',() => {
   if(checkIsAlphabets(searchValue.value)){
@@ -94,13 +87,13 @@ searchButton.addEventListener('click',() => {
   console.log(text);
   for(const prop in answers ){
     if(text == prop){
-      answerAreaTitle.textContent = "検索結果";
+      answerAreaTitle.textContent = searchValue.value+"の検索結果";
       answerAreaAnswer.textContent = answers[prop];
       answerArea.appendChild(answerAreaTitle);
       answerArea.appendChild(answerAreaAnswer);
       return;
     }else{
-      answerAreaTitle.textContent = "検索結果";
+      answerAreaTitle.textContent = searchValue.value+"の検索結果";
       answerAreaAnswer.textContent = "表示結果はありません";
       answerArea.appendChild(answerAreaTitle);
       answerArea.appendChild(answerAreaAnswer);
@@ -117,13 +110,13 @@ searchValue.addEventListener('keypress',(e) => {
     console.log(text);
     for(const prop in answers ){
       if(text == prop){
-        answerAreaTitle.textContent = "検索結果";
+        answerAreaTitle.textContent = searchValue.value+"の検索結果";
         answerAreaAnswer.textContent = answers[prop];
         answerArea.appendChild(answerAreaTitle);
         answerArea.appendChild(answerAreaAnswer);
         return;
       }else{
-        answerAreaTitle.textContent = "検索結果";
+        answerAreaTitle.textContent = searchValue.value+"の検索結果";
         answerAreaAnswer.textContent = "表示結果はありません";
         answerArea.appendChild(answerAreaTitle);
         answerArea.appendChild(answerAreaAnswer);
