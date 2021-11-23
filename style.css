@@ -71,16 +71,16 @@ button:hover{
 @media (max-width: 600px){
 
   .wrapper{
-    width: 480px;
+    width: 420px;
   }
 
   .search input{
-    width: 70%;
+    width: 72%;
     margin-right: 8%;
   }
   
   button {
-    width: 14%;
+    width: 16%;
     font-size: 0.2rem;
     border-radius: 0.2rem;
   }
