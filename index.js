@@ -53,7 +53,7 @@
 //   "DWI":"拡散強調像,プレゼンでディフュージョンという先生もいる",
 //   "PPI":"プロトンポンプ阻害薬"
 // };
-import { answers } from "./data";
+import { answers } from "./data.js";
 // ボタンが押されたときの動作
 const searchButton = document.getElementById("search");
 const searchValue = document.getElementById("abbreviation");
