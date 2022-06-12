@@ -18,6 +18,11 @@ a{
   max-width: 1080px;
 }
 
+
+.title-margin{
+  margin-bottom:2rem
+}
+
 .search {
   width: 80%;
   margin: 0 auto;
@@ -86,7 +91,7 @@ button:hover{
     width: 72%;
     margin-right: 8%;
   }
-  
+
   button {
     width: 16%;
     font-size: 0.2rem;
@@ -94,7 +99,7 @@ button:hover{
   }
   .result{
     width: 80%;
-    margin: 0 auto;  
+    margin: 0 auto;
   }
-  
+
 }
